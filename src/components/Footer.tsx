@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Vijaya Lakshmi</h3>
+            <h3 className={styles.footerTitle}>Tata Power EV Charging</h3>
             <p className={styles.footerDescription}>
-              Premium manufacturer and exporter of business bags, home textiles, and garments. 
-              Delivering quality from India to the world.
+              India's leading electric vehicle charging network. Powering sustainable mobility
+              with fast, reliable, and eco-friendly charging solutions across the nation.
             </p>
           </div>
 
@@ -32,22 +32,22 @@ const Footer: React.FC = () => {
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <FaMapMarkerAlt />
-                <span>Noida Sector 8, Uttar Pradesh, India</span>
+                <span>Mumbai, Maharashtra, India</span>
               </div>
               <div className={styles.contactItem}>
                 <FaPhone />
-                <span>+91 8285016625</span>
+                <span>1800-209-8282</span>
               </div>
               <div className={styles.contactItem}>
                 <FaEnvelope />
-                <span>kumarhari2@gmail.com</span>
+                <span>evcharging@tatapower.com</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; 2025 Vijaya Lakshmi. All rights reserved.</p>
+          <p>&copy; 2026 Tata Power EV Charging. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
-    { path: '/products', label: 'Products' },
+    { path: '/products', label: 'Charging Solutions' },
     { path: '/careers', label: 'Careers' },
     { path: '/contact', label: 'Contact Us' },
   ];
@@ -23,17 +23,16 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          Vijaya Lakshmi
+          Tata Power EV Charging
         </Link>
-        
+
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`${styles.navLink} ${
-                location.pathname === link.path ? styles.navLinkActive : ''
-              }`}
+              className={`${styles.navLink} ${location.pathname === link.path ? styles.navLinkActive : ''
+                }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}

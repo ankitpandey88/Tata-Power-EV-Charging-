@@ -1,644 +1,344 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import styles from './Products.module.css';
-
-// const Products: React.FC = () => {
-//   const productCategories = [
-//     {
-//       title: 'Business Bags',
-//       image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1200',
-//       gallery: [
-//         'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=400'
-//       ],
-//       description: 'Our premium business bag collection features meticulously crafted leather and fabric bags designed for the modern professional. Each bag combines functionality with sophisticated style, featuring multiple compartments, laptop sleeves, and durable construction. From executive briefcases to versatile messenger bags, our collection caters to diverse business needs while maintaining the highest quality standards.',
-//       materials: 'Premium leather, high-grade fabric, reinforced stitching',
-//       types: 'Briefcases, Laptop bags, Messenger bags, Travel bags',
-//       useCases: 'Corporate meetings, business travel, office use, professional networking'
-//     },
-//     {
-//       title: 'Home Textiles',
-//       image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=1200',
-//       gallery: [
-//         'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/6782351/pexels-photo-6782351.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/6527056/pexels-photo-6527056.jpeg?auto=compress&cs=tinysrgb&w=400'
-//       ],
-//       description: 'Transform your living space with our luxurious home textile collection. From elegant bedding sets to decorative cushions and curtains, each piece is crafted using the finest materials and traditional techniques. Our textiles blend comfort with style, offering durability and easy maintenance while adding a touch of sophistication to any home décor.',
-//       materials: 'Cotton, silk, linen, blended fabrics, eco-friendly dyes',
-//       types: 'Bedsheets, Cushion covers, Curtains, Table linens, Throws',
-//       useCases: 'Bedroom décor, living room enhancement, hotel industry, interior design'
-//     },
-//     {
-//       title: 'Garments',
-//       image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200',
-//       gallery: [
-//         'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400',
-//         'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400'
-//       ],
-//       description: 'Our garment collection represents the perfect fusion of traditional Indian craftsmanship and contemporary fashion. Each piece is designed with attention to detail, using premium fabrics and modern cuts. From casual wear to formal attire, our garments offer comfort, style, and durability, making them suitable for diverse international markets.',
-//       materials: 'Cotton, silk, polyester blends, sustainable fabrics',
-//       types: 'Formal wear, Casual clothing, Traditional garments, Custom designs',
-//       useCases: 'Professional attire, casual wear, special occasions, retail distribution'
-//     }
-//   ];
-
-//   return (
-//     <div className={styles.productsPage}>
-//       {/* Hero Section */}
-//       <section 
-//         className="hero-section"
-//         style={{
-//           backgroundImage: 'url("https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1600")'
-//         }}
-//       >
-//         <div className="hero-overlay"></div>
-//         <div className="hero-content">
-//           <h1 className="hero-title">Our Products</h1>
-//           <p className="hero-subtitle">Premium quality products crafted for international markets</p>
-//         </div>
-//       </section>
-
-//       {/* Product Categories */}
-//       {productCategories.map((category, index) => (
-//         <section key={index} className={`section ${styles.categorySection} ${index % 2 === 1 ? styles.reverse : ''}`}>
-//           <div className="container">
-//             <div className={styles.categoryContent}>
-//               <div className={styles.categoryGallery}>
-//                 <div className={styles.mainImage}>
-//                   <img src={category.image} alt={category.title} />
-//                 </div>
-//                 <div className={styles.thumbnails}>
-//                   {category.gallery.map((img, idx) => (
-//                     <img key={idx} src={img} alt={`${category.title} ${idx + 1}`} />
-//                   ))}
-//                 </div>
-//               </div>
-//               <div className={styles.categoryDetails}>
-//                 <h2 className={styles.categoryTitle}>{category.title}</h2>
-//                 <p className={styles.categoryDescription}>{category.description}</p>
-                
-//                 <div className={styles.categorySpecs}>
-//                   <div className={styles.specItem}>
-//                     <h4>Materials</h4>
-//                     <p>{category.materials}</p>
-//                   </div>
-//                   <div className={styles.specItem}>
-//                     <h4>Types Available</h4>
-//                     <p>{category.types}</p>
-//                   </div>
-//                   <div className={styles.specItem}>
-//                     <h4>Use Cases</h4>
-//                     <p>{category.useCases}</p>
-//                   </div>
-//                 </div>
-
-//                 <div className={styles.categoryActions}>
-//                   <Link to="/contact" className="btn btn-primary">Request Catalog</Link>
-//                   <Link to="/contact" className="btn btn-secondary">Get a Quote</Link>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Products;
-
 import React, { useState } from 'react';
+import { Zap, Battery, Home, Users, Gauge, Shield, Clock, Leaf } from 'lucide-react';
 
 const Products: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
 
-  const handleRequestCatalog = (productTitle: string) => {
-    const message = `Hi! I'm interested in requesting a catalog for "${productTitle}". Please provide more information.`;
-    const whatsappUrl = `https://wa.me/918285016625?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  const categories = [
+  const chargingSolutions = [
     {
-      id: 'bags',
-      title: 'Bags & Accesseories',
-      description: 'Professional and stylish bags for all occasions',
-      image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      icon: '👜'
+      id: 'ac-chargers',
+      title: 'AC Charging Stations',
+      subtitle: 'Perfect for Home & Workplace',
+      power: '7.4 kW - 22 kW',
+      icon: Home,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Our AC charging stations are ideal for overnight charging at home or workplace. Designed for convenience and efficiency, these chargers provide reliable power for your daily commute.',
+      features: [
+        'Smart charging with mobile app control',
+        'Energy monitoring and scheduling',
+        'Weather-resistant design',
+        'Compatible with all EV models',
+        'Easy installation and maintenance'
+      ],
+      specifications: {
+        'Power Output': '7.4 kW, 11 kW, 22 kW',
+        'Input Voltage': '230V AC / 400V AC',
+        'Connector Type': 'Type 2',
+        'Protection': 'IP54 rated',
+        'Warranty': '3 years'
+      },
+      useCases: ['Residential charging', 'Office parking', 'Hotels & restaurants', 'Shopping malls']
     },
     {
-      id: 'garments',
-      title: 'Garments - Ladies & Kids',
-      description: 'Premium clothing and formal wear',
-      image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800',
-      icon: '👔'
+      id: 'dc-fast-chargers',
+      title: 'DC Fast Chargers',
+      subtitle: 'Rapid Charging for Commercial Use',
+      power: '30 kW - 240 kW',
+      icon: Zap,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'High-power DC fast chargers designed for commercial locations and highways. Deliver rapid charging to get vehicles back on the road quickly.',
+      features: [
+        'Ultra-fast charging capability',
+        'Multiple connector options (CCS, CHAdeMO)',
+        'Real-time monitoring and diagnostics',
+        'Payment integration (RFID, mobile app)',
+        'Remote management system'
+      ],
+      specifications: {
+        'Power Output': '30 kW, 60 kW, 120 kW, 240 kW',
+        'Input Voltage': '400V AC 3-phase',
+        'Connector Type': 'CCS2, CHAdeMO',
+        'Protection': 'IP55 rated',
+        'Warranty': '5 years'
+      },
+      useCases: ['Highway charging stations', 'Commercial fleets', 'Public charging hubs', 'Retail locations']
     },
     {
-      id: 'activewear',
-      title: 'Active Wear - Sports,Gym,Swim Wear',
-      description: 'Comfortable and durable sports clothing',
-      image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800',
-      icon: '🏃'
+      id: 'home-charging',
+      title: 'Home Charging Solutions',
+      subtitle: 'Convenient Overnight Charging',
+      power: '3.3 kW - 7.4 kW',
+      icon: Battery,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Compact and user-friendly home charging solutions that integrate seamlessly with your residence. Charge your EV overnight and wake up to a full battery.',
+      features: [
+        'Compact wall-mounted design',
+        'WiFi connectivity for remote control',
+        'Scheduled charging for off-peak rates',
+        'LED status indicators',
+        'Safety certifications'
+      ],
+      specifications: {
+        'Power Output': '3.3 kW, 7.4 kW',
+        'Input Voltage': '230V AC single-phase',
+        'Connector Type': 'Type 2',
+        'Protection': 'IP44 rated',
+        'Warranty': '2 years'
+      },
+      useCases: ['Residential garages', 'Apartment complexes', 'Private parking', 'Home installations']
     },
     {
-      id: 'hometextiles',
-      title: 'Home Decor & Textiles',
-      description: 'Luxurious home décor and textiles',
-      image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=800',
-      icon: '🏠'
+      id: 'fleet-solutions',
+      title: 'Fleet Charging Solutions',
+      subtitle: 'Scalable Infrastructure for Businesses',
+      power: 'Customizable',
+      icon: Users,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Comprehensive charging infrastructure designed for commercial fleets. Scalable solutions with advanced management systems for optimal fleet operations.',
+      features: [
+        'Centralized fleet management dashboard',
+        'Load balancing across multiple chargers',
+        'Usage analytics and reporting',
+        'Customizable charging schedules',
+        'Integration with fleet management systems'
+      ],
+      specifications: {
+        'Power Output': 'Customizable based on fleet size',
+        'Charger Types': 'AC & DC options available',
+        'Management': 'Cloud-based platform',
+        'Scalability': 'Modular expansion',
+        'Support': '24/7 technical support'
+      },
+      useCases: ['Taxi & ride-sharing fleets', 'Delivery services', 'Corporate vehicle fleets', 'Public transport']
+    },
+    {
+      id: 'solar-charging',
+      title: 'Solar-Powered Charging',
+      subtitle: 'Sustainable Green Energy',
+      power: 'Variable',
+      icon: Leaf,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Eco-friendly charging solutions powered by solar energy. Reduce your carbon footprint while charging your electric vehicle with clean, renewable energy.',
+      features: [
+        'Integrated solar panel system',
+        'Battery storage for 24/7 charging',
+        'Grid-tied or off-grid options',
+        'Energy optimization algorithms',
+        'Environmental impact tracking'
+      ],
+      specifications: {
+        'Solar Capacity': '5 kW - 50 kW',
+        'Battery Storage': 'Optional (10 kWh - 100 kWh)',
+        'Charging Output': '7.4 kW - 22 kW',
+        'Efficiency': '95%+',
+        'Warranty': '10 years (solar), 5 years (charger)'
+      },
+      useCases: ['Eco-conscious homes', 'Remote locations', 'Sustainable businesses', 'Off-grid installations']
+    },
+    {
+      id: 'smart-charging',
+      title: 'Smart Charging Stations',
+      subtitle: 'IoT-Enabled Intelligence',
+      power: '7.4 kW - 22 kW',
+      icon: Gauge,
+      image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Next-generation smart charging stations with IoT connectivity, AI-powered optimization, and seamless integration with smart home systems.',
+      features: [
+        'AI-powered charging optimization',
+        'Voice assistant integration',
+        'Automatic vehicle recognition',
+        'Dynamic load management',
+        'Over-the-air software updates'
+      ],
+      specifications: {
+        'Power Output': '7.4 kW, 11 kW, 22 kW',
+        'Connectivity': 'WiFi, 4G, Bluetooth',
+        'Smart Features': 'AI optimization, voice control',
+        'Compatibility': 'All major EV brands',
+        'Warranty': '3 years'
+      },
+      useCases: ['Smart homes', 'Tech-forward businesses', 'Premium installations', 'Future-ready infrastructure']
     }
   ];
 
-  const allProducts = {
-    bags: [
-      {
-        title: 'Executive Briefcase',
-        image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Premium leather briefcase with multiple compartments and laptop sleeve.',
-        materials: 'Genuine leather, brass hardware',
-        types: 'Briefcases, Business bags',
-        useCases: 'Corporate meetings, business travel',
-      },
-      {
-        title: 'Messenger Bag Pro',
-        image: 'https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Versatile messenger bag with laptop compartment and organizer pockets.',
-        materials: 'Canvas, leather accents',
-        types: 'Messenger bags, Crossbody bags',
-        useCases: 'Daily commute, casual business',
-      },
-      {
-        title: 'Travel Backpack',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Spacious backpack perfect for business trips and daily use.',
-        materials: 'Nylon, polyester lining',
-        types: 'Backpacks, Travel bags',
-        useCases: 'Business travel, daily commuting',
-      },
-      {
-        title: 'Laptop Sleeve',
-        image: 'https://images.pexels.com/photos/1181470/pexels-photo-1181470.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Protective laptop sleeve with premium padding and sleek design.',
-        materials: 'Neoprene, microfiber lining',
-        types: 'Laptop cases, Tech accessories',
-        useCases: 'Laptop protection, office use',
-      },
-      {
-        title: 'Tote Bag Classic',
-        image: 'https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Elegant tote bag suitable for work and casual outings.',
-        materials: 'Cotton canvas, leather handles',
-        types: 'Tote bags, Shopping bags',
-        useCases: 'Daily use, shopping, work',
-      },
-      {
-        title: 'Crossbody Bag',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Compact crossbody bag with multiple compartments for essentials.',
-        materials: 'Leather, metal hardware',
-        types: 'Crossbody bags, Shoulder bags',
-        useCases: 'Casual outings, travel',
-      },
-      {
-        title: 'Duffel Bag',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Large duffel bag perfect for gym and weekend trips.',
-        materials: 'Polyester, reinforced stitching',
-        types: 'Duffel bags, Sports bags',
-        useCases: 'Gym, sports, weekend trips',
-      },
-      {
-        title: 'Wallet Set',
-        image: 'https://images.pexels.com/photos/1181470/pexels-photo-1181470.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Premium leather wallet with RFID blocking technology.',
-        materials: 'Genuine leather, RFID blocking',
-        types: 'Wallets, Card holders',
-        useCases: 'Daily use, security',
-      },
-      {
-        title: 'Pouch Collection',
-        image: 'https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Set of organizer pouches for travel and daily organization.',
-        materials: 'Nylon, mesh panels',
-        types: 'Organizer pouches, Travel accessories',
-        useCases: 'Travel organization, daily use',
-      },
-      {
-        title: 'Satchel Bag',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Classic satchel bag with vintage-inspired design and modern functionality.',
-        materials: 'Leather, brass buckles',
-        types: 'Satchel bags, Vintage bags',
-        useCases: 'Casual use, vintage style',
-      }
-    ],
-    garments: [
-      {
-        title: 'Formal Blazer',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Tailored formal blazer with modern cut and premium fabric.',
-        materials: 'Wool blend, polyester lining',
-        types: 'Blazers, Formal jackets',
-        useCases: 'Business meetings, formal events',
-      },
-      {
-        title: 'Dress Shirt',
-        image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Classic dress shirt with crisp collar and comfortable fit.',
-        materials: 'Cotton, polyester blend',
-        types: 'Dress shirts, Formal shirts',
-        useCases: 'Office wear, formal occasions',
-      },
-      {
-        title: 'Business Suit',
-        image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Complete business suit with jacket and trousers.',
-        materials: 'Wool blend, silk lining',
-        types: 'Suits, Business attire',
-        useCases: 'Corporate meetings, formal events',
-      },
-      {
-        title: 'Casual Shirt',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Comfortable casual shirt perfect for everyday wear.',
-        materials: 'Cotton, spandex blend',
-        types: 'Casual shirts, Everyday wear',
-        useCases: 'Daily wear, casual outings',
-      },
-      {
-        title: 'Chinos',
-        image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Versatile chinos suitable for both casual and smart casual looks.',
-        materials: 'Cotton twill, stretch fabric',
-        types: 'Chinos, Casual pants',
-        useCases: 'Casual wear, smart casual',
-      },
-      {
-        title: 'Polo Shirt',
-        image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Classic polo shirt with comfortable fit and durable construction.',
-        materials: 'Cotton pique, polyester blend',
-        types: 'Polo shirts, Casual tops',
-        useCases: 'Casual wear, sports',
-      },
-      {
-        title: 'Dress Pants',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Formal dress pants with clean lines and professional appearance.',
-        materials: 'Wool blend, polyester lining',
-        types: 'Dress pants, Formal trousers',
-        useCases: 'Business wear, formal events',
-      },
-      {
-        title: 'Cardigan',
-        image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Comfortable cardigan perfect for layering and casual wear.',
-        materials: 'Cotton blend, acrylic',
-        types: 'Cardigans, Sweaters',
-        useCases: 'Casual wear, layering',
-      },
-      {
-        title: 'Trousers',
-        image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Versatile trousers suitable for various occasions.',
-        materials: 'Cotton blend, stretch fabric',
-        types: 'Trousers, Casual pants',
-        useCases: 'Daily wear, office casual',
-      },
-      {
-        title: 'Vest',
-        image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Classic vest for layering and formal occasions.',
-        materials: 'Wool blend, silk lining',
-        types: 'Vests, Formal wear',
-        useCases: 'Formal wear, layering',
-      }
-    ],
-    activewear: [
-      {
-        title: 'Sports T-Shirt',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Moisture-wicking sports t-shirt for active lifestyle.',
-        materials: 'Polyester blend, moisture-wicking',
-        types: 'Sports shirts, Athletic wear',
-        useCases: 'Sports, gym, outdoor activities',
-      },
-      {
-        title: 'Training Shorts',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Comfortable training shorts with built-in compression.',
-        materials: 'Polyester, spandex blend',
-        types: 'Sports shorts, Athletic wear',
-        useCases: 'Training, sports, gym',
-      },
-      {
-        title: 'Running Jacket',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Lightweight running jacket with breathable fabric.',
-        materials: 'Polyester, mesh panels',
-        types: 'Sports jackets, Running gear',
-        useCases: 'Running, outdoor sports',
-      },
-      {
-        title: 'Yoga Pants',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Stretchy yoga pants for comfort and flexibility.',
-        materials: 'Polyester, spandex blend',
-        types: 'Yoga pants, Athletic wear',
-        useCases: 'Yoga, fitness, casual wear',
-      },
-      {
-        title: 'Hoodie',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Comfortable hoodie perfect for workouts and casual wear.',
-        materials: 'Cotton blend, polyester',
-        types: 'Hoodies, Casual wear',
-        useCases: 'Gym, casual wear, outdoor',
-      },
-      {
-        title: 'Compression Shirt',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Performance compression shirt for enhanced athletic performance.',
-        materials: 'Polyester, spandex blend',
-        types: 'Compression wear, Athletic shirts',
-        useCases: 'Sports, training, recovery',
-      },
-      {
-        title: 'Track Pants',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Classic track pants for training and casual wear.',
-        materials: 'Polyester blend, cotton',
-        types: 'Track pants, Athletic wear',
-        useCases: 'Training, casual wear, sports',
-      },
-      {
-        title: 'Sports Bra',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Supportive sports bra for high-impact activities.',
-        materials: 'Polyester, spandex blend',
-        types: 'Sports bras, Athletic wear',
-        useCases: 'Sports, fitness, active lifestyle',
-      },
-      {
-        title: 'Athletic Socks',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Moisture-wicking athletic socks for comfort and performance.',
-        materials: 'Cotton blend, polyester',
-        types: 'Athletic socks, Sports accessories',
-        useCases: 'Sports, fitness, daily wear',
-      },
-      {
-        title: 'Workout Tank',
-        image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Breathable workout tank top for intense training sessions.',
-        materials: 'Polyester, mesh panels',
-        types: 'Tank tops, Athletic wear',
-        useCases: 'Gym, training, outdoor sports',
-      }
-    ],
-    hometextiles: [
-      {
-        title: 'Luxury Bedding Set',
-        image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Premium bedding set with high thread count cotton sheets.',
-        materials: 'Egyptian cotton, silk accents',
-        types: 'Bedding sets, Sheets',
-        useCases: 'Bedroom décor, luxury hotels',
-      },
-      {
-        title: 'Decorative Cushions',
-        image: 'https://images.pexels.com/photos/6782351/pexels-photo-6782351.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Vibrant decorative cushions to enhance your living space.',
-        materials: 'Cotton, polyester blend',
-        types: 'Cushion covers, Throw pillows',
-        useCases: 'Living room décor, interior design',
-      },
-      {
-        title: 'Silk Curtains',
-        image: 'https://images.pexels.com/photos/6527056/pexels-photo-6527056.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Elegant silk curtains that add sophistication to any room.',
-        materials: 'Silk, blended fabrics',
-        types: 'Curtains, Drapes',
-        useCases: 'Home décor, hotel interiors',
-      },
-      {
-        title: 'Table Linens',
-        image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Elegant table linens for dining and special occasions.',
-        materials: 'Linen, cotton blends',
-        types: 'Tablecloths, Napkins',
-        useCases: 'Dining, hospitality industry',
-      },
-      {
-        title: 'Throw Blanket',
-        image: 'https://images.pexels.com/photos/6782351/pexels-photo-6782351.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Soft throw blanket perfect for cozy evenings.',
-        materials: 'Cotton blend, acrylic',
-        types: 'Throw blankets, Home accessories',
-        useCases: 'Living room, bedroom, comfort',
-      },
-      {
-        title: 'Bath Towels',
-        image: 'https://images.pexels.com/photos/6527056/pexels-photo-6527056.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Premium bath towels with excellent absorbency and softness.',
-        materials: 'Turkish cotton, bamboo blend',
-        types: 'Bath towels, Bath accessories',
-        useCases: 'Bathroom, spa, daily use',
-      },
-      {
-        title: 'Kitchen Towels',
-        image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Durable kitchen towels for everyday use.',
-        materials: 'Cotton, linen blend',
-        types: 'Kitchen towels, Dish towels',
-        useCases: 'Kitchen, cooking, cleaning',
-      },
-      {
-        title: 'Placemats Set',
-        image: 'https://images.pexels.com/photos/6782351/pexels-photo-6782351.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Stylish placemats to enhance your dining experience.',
-        materials: 'Cork, cotton blend',
-        types: 'Placemats, Dining accessories',
-        useCases: 'Dining table, entertaining',
-      },
-      {
-        title: 'Window Curtains',
-        image: 'https://images.pexels.com/photos/6527056/pexels-photo-6527056.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Light-filtering window curtains for privacy and style.',
-        materials: 'Polyester blend, cotton',
-        types: 'Window curtains, Privacy curtains',
-        useCases: 'Bedroom, living room, privacy',
-      },
-      {
-        title: 'Bed Runner',
-        image: 'https://images.pexels.com/photos/6444444/pexels-photo-6444444.jpeg?auto=compress&cs=tinysrgb&w=400',
-        description: 'Decorative bed runner to add elegance to your bedroom.',
-        materials: 'Cotton, silk accents',
-        types: 'Bed runners, Bedroom accessories',
-        useCases: 'Bedroom décor, luxury hotels',
-      }
-    ]
-  };
-
-  const currentProducts = selectedCategory ? allProducts[selectedCategory as keyof typeof allProducts] : [];
+  const selectedSolution = chargingSolutions.find(s => s.id === selectedProduct);
 
   return (
-    <div className="font-sans bg-gray-50 min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section
-        className="relative h-[40rem] bg-cover bg-center flex items-center justify-center text-white text-center"
+        className="relative h-96 bg-cover bg-center flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url("https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1600")',
+          background: 'linear-gradient(135deg, #1e3a8a 0%, #0891b2 50%, #10b981 100%)',
         }}
       >
-        <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-            Our Products
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
+            EV Charging Solutions
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-100">
-            Premium quality products crafted for international markets
+          <p className="text-xl md:text-2xl text-cyan-100">
+            Comprehensive charging infrastructure for every need
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full"></div>
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <Zap className="w-6 h-6 text-yellow-400" />
+            <span className="text-lg">Powering India's Electric Future</span>
+          </div>
         </div>
       </section>
 
-      {/* Categories or Products Section */}
-      <section className="py-16 -mt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {!selectedCategory ? (
-            // Show Categories
+      {/* Solutions Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {!selectedProduct ? (
             <>
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  Choose Your Category
+                <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                  Choose Your Charging Solution
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Select a category to explore our premium collection of products
+                  From home charging to commercial fleet solutions, we have the perfect charging infrastructure for your needs
                 </p>
               </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {categories.map((category) => (
-                  <div
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
-                  >
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <img
-                        src={category.image}
-                        alt={category.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 right-4 text-4xl opacity-80">
-                        {category.icon}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {chargingSolutions.map((solution) => {
+                  const Icon = solution.icon;
+                  return (
+                    <div
+                      key={solution.id}
+                      onClick={() => setSelectedProduct(solution.id)}
+                      className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer group"
+                    >
+                      <div className="relative h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                        <Icon className="w-24 h-24 text-white opacity-90 group-hover:scale-110 transition-transform" />
+                        <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-semibold">
+                          {solution.power}
+                        </div>
+                      </div>
+
+                      <div className="p-6">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                          {solution.title}
+                        </h3>
+                        <p className="text-cyan-600 font-semibold mb-3">{solution.subtitle}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                          {solution.description.substring(0, 120)}...
+                        </p>
+                        <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all flex items-center justify-center gap-2">
+                          Learn More
+                          <Zap className="w-4 h-4" />
+                        </button>
                       </div>
                     </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {category.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </>
           ) : (
-            // Show Products for Selected Category
-            <>
-              <div className="flex items-center justify-between mb-12">
-                <div>
-                  <button
-                    onClick={() => setSelectedCategory(null)}
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-300 mb-4"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Back to Categories
-                  </button>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                    {categories.find(cat => cat.id === selectedCategory)?.title} Collection
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    {categories.find(cat => cat.id === selectedCategory)?.description}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {currentProducts.map((product, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group"
-                  >
-                    <div className="relative w-full h-56 overflow-hidden">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            selectedSolution && (
+              <div className="max-w-5xl mx-auto">
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-8 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Back to Solutions
+                </button>
+
+                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  {/* Product Header */}
+                  <div className="relative h-64 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
+                    {React.createElement(selectedSolution.icon, { className: "w-32 h-32 text-white opacity-90" })}
+                    <div className="absolute top-6 right-6 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-bold">
+                      {selectedSolution.power}
                     </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                        {product.title}
+                  </div>
+
+                  <div className="p-8 md:p-12">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-2">{selectedSolution.title}</h2>
+                    <p className="text-xl text-cyan-600 font-semibold mb-6">{selectedSolution.subtitle}</p>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-8">{selectedSolution.description}</p>
+
+                    {/* Features */}
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <Shield className="w-6 h-6 text-blue-600" />
+                        Key Features
                       </h3>
-                      
-                      <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                        {product.description}
-                      </p>
-                      
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <div>
-                            <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Materials</h4>
-                            <p className="text-xs text-gray-500 mt-1">{product.materials}</p>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {selectedSolution.features.map((feature, index) => (
+                          <div key={index} className="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <Zap className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">{feature}</span>
                           </div>
-                        </div>
-                        
-                        <div className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <div>
-                            <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Types</h4>
-                            <p className="text-xs text-gray-500 mt-1">{product.types}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <div>
-                            <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Use Cases</h4>
-                            <p className="text-xs text-gray-500 mt-1">{product.useCases}</p>
-                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Specifications */}
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <Gauge className="w-6 h-6 text-cyan-600" />
+                        Technical Specifications
+                      </h3>
+                      <div className="bg-gray-50 rounded-xl p-6">
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {Object.entries(selectedSolution.specifications).map(([key, value]) => (
+                            <div key={key} className="border-l-4 border-blue-500 pl-4">
+                              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{key}</p>
+                              <p className="text-lg text-gray-800 font-medium">{value}</p>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                      
-                      <button
-                        onClick={() => handleRequestCatalog(product.title)}
-                        className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium flex items-center justify-center gap-2 group"
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                        </svg>
-                        Request Catalog
+                    </div>
+
+                    {/* Use Cases */}
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <Clock className="w-6 h-6 text-green-600" />
+                        Ideal Use Cases
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        {selectedSolution.useCases.map((useCase, index) => (
+                          <span
+                            key={index}
+                            className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full font-semibold"
+                          >
+                            {useCase}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="flex flex-wrap gap-4">
+                      <button className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all transform hover:scale-105 shadow-lg">
+                        Request Quote
+                      </button>
+                      <button className="flex-1 bg-white border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all">
+                        Contact Sales
                       </button>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
-            </>
+            )
           )}
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-12">Why Choose Tata Power EV Charging?</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { icon: Shield, title: 'Reliable', desc: 'Industry-leading uptime and reliability' },
+              { icon: Zap, title: 'Fast', desc: 'Quick charging with latest technology' },
+              { icon: Leaf, title: 'Green', desc: 'Powered by renewable energy' },
+              { icon: Users, title: 'Support', desc: '24/7 customer assistance' }
+            ].map((item, index) => (
+              <div key={index} className="p-6">
+                <item.icon className="w-16 h-16 mx-auto mb-4 text-blue-600" />
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
