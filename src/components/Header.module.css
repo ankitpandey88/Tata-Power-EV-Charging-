@@ -64,6 +64,16 @@
   background-color: var(--accent-gold);
 }
 
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loginText {
+  display: inline;
+}
+
 .mobileMenuBtn {
   display: none;
   background: none;
@@ -74,6 +84,10 @@
 }
 
 @media (max-width: 768px) {
+  .loginText {
+    display: none;
+  }
+
   .mobileMenuBtn {
     display: block;
   }
