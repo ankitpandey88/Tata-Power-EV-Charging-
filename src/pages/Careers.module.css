@@ -1,0 +1,147 @@
+.careersPage {
+  padding-top: 70px;
+}
+
+.introSection {
+  background-color: white;
+}
+
+.introContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.opportunitiesSection {
+  background-color: var(--light-grey);
+}
+
+.opportunitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.opportunityCard {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.opportunityCard:hover {
+  transform: translateY(-5px);
+}
+
+.departmentTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.rolesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.roleTag {
+  background-color: var(--accent-gold);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.departmentDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.benefitsSection {
+  background-color: white;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefitCard {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.benefitIcon {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+}
+
+.benefitTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.benefitDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.applySection {
+  background: linear-gradient(135deg, var(--primary-color), #004080);
+  color: white;
+}
+
+.applyContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.applyTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.applyText {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.applySection .btn {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .applyTitle {
+    font-size: 2rem;
+  }
+  
+  .opportunityCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .roleTag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

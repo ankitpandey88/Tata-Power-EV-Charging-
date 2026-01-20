@@ -1,0 +1,122 @@
+.aboutPage {
+  padding-top: 70px;
+}
+
+.storySection {
+  background-color: white;
+}
+
+.storyContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textBlocks p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.storyImage {
+  position: relative;
+}
+
+.storyImage img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.missionSection {
+  background-color: var(--light-grey);
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.missionCard {
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+}
+
+.missionCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.missionCard p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.strengthsSection {
+  background-color: white;
+}
+
+.strengthsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.strengthCard {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.strengthCard:hover {
+  background-color: var(--light-grey);
+}
+
+.strengthIcon {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+}
+
+.strengthTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.strengthDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .storyContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .storyImage img {
+    height: 300px;
+  }
+  
+  .missionCard {
+    padding: 2rem 1.5rem;
+  }
+}
